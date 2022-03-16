@@ -29,6 +29,15 @@
         <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
         <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
         <script type="text/babel">
+            const jsonLocalStorage = {
+                setItem: (key, value) => {
+                    localStorage.setItem(key, JSON.stringify(value));
+                },
+                getItem: (key) => {
+                    return JSON.parse(localStorage.getItem(key));
+                },
+            };
+
             console.log("야옹");
 
             const Title = (props) => <h1>{props.children}</h1>;
@@ -73,11 +82,11 @@
                 );
             };
 
-            const MainCard = ({ img, handleHeartClick }) => {
+            const MainCard = ({ img, onHeartClick }) => {
                 return (
                     <div className="main-card">
                         <img src={img} alt="고양이" width="400" />
-                        <button onClick={handleHeartClick}>🤍</button>
+                        <button onClick={onHeartClick}>🤍</button>
                     </div>
                 );
             };
@@ -105,17 +114,21 @@
                 const CAT2 = "https://cataas.com//cat/5e9970351b7a400011744233/says/inflearn";
                 const CAT3 = "https://cataas.com/cat/595f280b557291a9750ebf65/says/JavaScript";
 
-                const [counter, setCounter] = React.useState(1);
+                const [counter, setCounter] = React.useState(jsonLocalStorage.getItem("counter"));
                 const [mainCat, setMainCat] = React.useState(CAT1);
-                const [favorites, setFavorites] = React.useState([CAT1, CAT2]);
+                const [favorites, setFavorites] = React.useState(jsonLocalStorage.getItem("favorites") || []);
 
                 function updateMainCat() {
                     setMainCat(CAT2);
-                    setCounter(counter + 1);
+                    const nextCounter = counter + 1;
+                    setCounter(nextCounter);
+                    jsonLocalStorage.setItem("counter", nextCounter);
                 }
 
                 function handleHeartClick() {
-                    setFavorites([...favorites, CAT3]);
+                    const nextFavorites = [...favorites, mainCat];
+                    setFavorites(nextFavorites);
+                    jsonLocalStorage.setItem("favorites", nextFavorites);
                 }
 
                 return (
