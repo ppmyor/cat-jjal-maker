@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.2eab430d.css",
-    "main.js": "/static/js/main.705b3a78.js",
-    "static/js/787.44ce1ab4.chunk.js": "/static/js/787.44ce1ab4.chunk.js",
-    "index.html": "/index.html",
-    "main.2eab430d.css.map": "/static/css/main.2eab430d.css.map",
-    "main.705b3a78.js.map": "/static/js/main.705b3a78.js.map",
-    "787.44ce1ab4.chunk.js.map": "/static/js/787.44ce1ab4.chunk.js.map"
+    "main.css": "/ppmyor.github.io/cat-jjal-maker/static/css/main.2eab430d.css",
+    "main.js": "/ppmyor.github.io/cat-jjal-maker/static/js/main.34533c43.js",
+    "static/js/787.44ce1ab4.chunk.js": "/ppmyor.github.io/cat-jjal-maker/static/js/787.44ce1ab4.chunk.js",
+    "index.html": "/ppmyor.github.io/cat-jjal-maker/index.html",
+    "main.2eab430d.css.map": "/ppmyor.github.io/cat-jjal-maker/static/css/main.2eab430d.css.map",
+    "main.34533c43.js.map": "/ppmyor.github.io/cat-jjal-maker/static/js/main.34533c43.js.map",
+    "787.44ce1ab4.chunk.js.map": "/ppmyor.github.io/cat-jjal-maker/static/js/787.44ce1ab4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2eab430d.css",
-    "static/js/main.705b3a78.js"
+    "static/js/main.34533c43.js"
   ]
 }
