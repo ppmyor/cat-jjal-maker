@@ -62,11 +62,15 @@ const App = () => {
     const counterTitle = counter === null ? "" : counter + "번째 ";
 
     return (
-        <div>
-            <Title>{counterTitle}고양이 가라사대</Title>
-            <Form updateMainCat={updateMainCat} />
+        <div className="main">
+            <header>
+                <Title>{counterTitle}고양이 가라사대</Title>
+                <Form updateMainCat={updateMainCat} />
+            </header>
             <MainCard img={mainCat} onHeartClick={handleHeartClick} alreadyFavorite={alreadyFavorite} />
-            <Favorites favorites={favorites} />
+            <footer>
+                <Favorites favorites={favorites} />
+            </footer>
         </div>
     );
 };

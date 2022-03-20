@@ -1,17 +1,49 @@
+* {
+    box-sizing: 0;
+    margin: 0;
+}
+
 body {
-    text-align: center;
-}
-
-.main-card button {
-    position: relative;
-    left: -45px;
-    bottom: 15px;
-}
-
-.favorites {
-    list-style: none;
+    font-family: "Noto Sans KR", sans-serif;
+    width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
+    align-items: center;
+    text-align: center;
+    background-color: #ad8b73;
+    color: #1b1b1b;
+}
+
+/* CSS REASET */
+input,
+button {
+    font-family: "Noto Sans KR", sans-serif;
+    background-color: transparent;
+    border: none;
+    color: #1b1b1b;
+}
+
+input:focus,
+input:active {
+    outline: none;
+}
+
+header {
+    height: 150px;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fffbe9;
+    width: 600px;
+    height: 800px;
+    padding: 30px;
+    border-radius: 30px;
+}
+
+footer {
+    height: 200px;
 }

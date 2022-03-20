@@ -1,4 +1,5 @@
 import CatItem from "./CatItems";
+import styles from "./Favorites.module.css";
 
 function Favorites({ favorites }) {
     if (favorites.length === 0) {
@@ -6,7 +7,7 @@ function Favorites({ favorites }) {
     }
 
     return (
-        <ul className="favorites">
+        <ul className={styles.favorites}>
             {favorites.map((cat) => (
                 <CatItem img={cat} key={cat} />
             ))}

@@ -1,0 +1,51 @@
+form {
+    margin-top: 30px;
+}
+
+/* 영어 대사 입력창 */
+
+form input {
+    font-weight: 500;
+    width: 200px;
+    border-bottom: 1px solid #e3caa5;
+    padding: 5px;
+    transition: border 300ms ease-in-out;
+}
+
+form input::placeholder {
+    text-align: center;
+    font-weight: 400;
+    color: #555555;
+}
+
+form input:focus {
+    border-bottom: 1px solid #ad8b73;
+}
+
+/* 생성 버튼 */
+form button {
+    font-weight: 500;
+    color: #fff;
+    background-color: #ceab93;
+    box-shadow: 3px 3px 2px #bb9c86;
+    border-radius: 5px;
+    margin-left: 10px;
+    padding: 5px 7px;
+    transition: background-color 300ms ease-in-out, box-shadow 300ms ease-in-out;
+}
+
+form button:hover {
+    font-weight: 500;
+    background-color: #ad8b73;
+}
+
+form button:active {
+    background-color: #614d3f;
+    box-shadow: 3px 3px 2px #584639;
+}
+
+form p {
+    font-size: 14px;
+    color: rgb(253, 61, 61);
+    margin-top: 20px;
+}

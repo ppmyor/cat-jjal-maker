@@ -1,0 +1,9 @@
+.favorites {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-left: 0;
+}
