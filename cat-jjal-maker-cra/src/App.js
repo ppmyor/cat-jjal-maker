@@ -44,9 +44,11 @@ const App = () => {
     }
 
     function handleHeartClick() {
-        const nextFavorites = [...favorites, mainCat];
-        setFavorites(nextFavorites);
-        jsonLocalStorage.setItem("favorites", nextFavorites);
+        if (!alreadyFavorite) {
+            const nextFavorites = [...favorites, mainCat];
+            setFavorites(nextFavorites);
+            jsonLocalStorage.setItem("favorites", nextFavorites);
+        }
     }
 
     const counterTitle = counter === null ? "" : counter + "번째 ";
