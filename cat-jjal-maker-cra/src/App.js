@@ -48,12 +48,20 @@ const App = () => {
             const removeMainCat = favorites.filter((favorite) => favorite !== mainCat);
             setFavorites(removeMainCat);
             jsonLocalStorage.setItem("favorites", removeMainCat);
-            console.log(mainCat);
+            console.log(favorites);
             return;
         }
         const nextFavorites = [...favorites, mainCat];
         setFavorites(nextFavorites);
         jsonLocalStorage.setItem("favorites", nextFavorites);
+    }
+
+    function handleRemoveCat(event) {
+        const target = event.target.parentElement;
+        console.log(target);
+        const removeMainCat = favorites.filter((favorite) => favorite !== target);
+        setFavorites(removeMainCat);
+        jsonLocalStorage.setItem("favorites", removeMainCat);
     }
 
     const counterTitle = counter === null ? "" : counter + "번째 ";
@@ -71,7 +79,7 @@ const App = () => {
                 defaultCatState={defaultCatState}
             />
             <footer>
-                <Favorites favorites={favorites} />
+                <Favorites favorites={favorites} onRemoveCat={handleRemoveCat} />
             </footer>
         </div>
     );

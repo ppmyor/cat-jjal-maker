@@ -1,7 +1,10 @@
-function CatItem(props) {
+import styles from "./CatItem.module.css";
+
+function CatItem({ img, onRemoveCat }) {
     return (
-        <li>
-            <img src={props.img} style={{ width: "150px" }} />
+        <li className={styles.catItem}>
+            <img src={img} />
+            <button onClick={onRemoveCat}>✕</button>
         </li>
     );
 }

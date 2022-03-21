@@ -1,0 +1,18 @@
+.catItem {
+    position: relative;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.catItem img {
+    width: 150px;
+}
+
+.catItem button {
+    position: absolute;
+    font-size: 13px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    top: -7px;
+    right: -7px;
+}
