@@ -6,7 +6,7 @@ span {
 .favorites {
     list-style: none;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     flex-wrap: nowrap;
     gap: 15px;
     padding-left: 0;

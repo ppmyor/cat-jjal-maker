@@ -2,11 +2,12 @@
     position: relative;
     margin-top: 10px;
     margin-right: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .catItem img {
-    width: 150px;
+    max-width: 150px;
+    max-height: 280px;
 }
 
 .catItem .deleteBtn {
@@ -19,15 +20,12 @@
 }
 
 .catItem .copyBtn {
-    position: absolute;
     font-size: 10px;
     font-weight: 500;
     color: #fff;
     background-color: #ceab93;
+    box-shadow: 3px 3px 2px #bb9c86;
     border-radius: 30px;
-    bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .catItem .copyBtn:hover {
@@ -36,4 +34,5 @@
 
 .catItem .copyBtn:active {
     background-color: #614d3f;
+    box-shadow: 3px 3px 2px #584639;
 }
