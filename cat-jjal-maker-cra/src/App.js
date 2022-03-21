@@ -48,7 +48,6 @@ const App = () => {
             const removeMainCat = favorites.filter((favorite) => favorite !== mainCat);
             setFavorites(removeMainCat);
             jsonLocalStorage.setItem("favorites", removeMainCat);
-            console.log(favorites);
             return;
         }
         const nextFavorites = [...favorites, mainCat];
@@ -57,11 +56,10 @@ const App = () => {
     }
 
     function handleRemoveCat(event) {
-        const target = event.target.parentElement;
-        console.log(target);
-        const removeMainCat = favorites.filter((favorite) => favorite !== target);
-        setFavorites(removeMainCat);
-        jsonLocalStorage.setItem("favorites", removeMainCat);
+        const removeImageSrc = event.target.previousElementSibling.src;
+        const removeSelectedCat = favorites.filter((favorite) => favorite !== removeImageSrc);
+        setFavorites(removeSelectedCat);
+        jsonLocalStorage.setItem("favorites", removeSelectedCat);
     }
 
     const counterTitle = counter === null ? "" : counter + "번째 ";
