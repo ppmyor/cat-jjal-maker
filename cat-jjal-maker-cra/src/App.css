@@ -32,18 +32,21 @@ input:active {
 header {
     height: 150px;
 }
+
 .main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     background-color: #fffbe9;
-    width: 600px;
-    height: 800px;
+    width: 700px;
+    height: 850px;
     padding: 30px;
     border-radius: 30px;
 }
 
 footer {
-    height: 200px;
+    height: 230px;
+    max-width: 100%;
+    overflow-x: auto;
 }
