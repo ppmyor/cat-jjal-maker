@@ -44,11 +44,16 @@ const App = () => {
     }
 
     function handleHeartClick() {
-        if (!alreadyFavorite) {
-            const nextFavorites = [...favorites, mainCat];
-            setFavorites(nextFavorites);
-            jsonLocalStorage.setItem("favorites", nextFavorites);
+        if (alreadyFavorite) {
+            const removeMainCat = favorites.filter((favorite) => favorite !== mainCat);
+            setFavorites(removeMainCat);
+            jsonLocalStorage.setItem("favorites", removeMainCat);
+            console.log(mainCat);
+            return;
         }
+        const nextFavorites = [...favorites, mainCat];
+        setFavorites(nextFavorites);
+        jsonLocalStorage.setItem("favorites", nextFavorites);
     }
 
     const counterTitle = counter === null ? "" : counter + "번째 ";

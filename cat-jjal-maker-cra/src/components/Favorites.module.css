@@ -10,4 +10,5 @@ span {
     flex-wrap: nowrap;
     gap: 15px;
     padding-left: 0;
+    overflow-x: auto;
 }
