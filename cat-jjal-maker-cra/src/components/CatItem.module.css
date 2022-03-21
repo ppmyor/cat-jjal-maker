@@ -2,17 +2,38 @@
     position: relative;
     margin-top: 10px;
     margin-right: 10px;
+    margin-bottom: 20px;
 }
 
 .catItem img {
     width: 150px;
 }
 
-.catItem button {
+.catItem .deleteBtn {
     position: absolute;
     font-size: 13px;
     border-radius: 50%;
     background-color: #ffffff;
     top: -7px;
     right: -7px;
+}
+
+.catItem .copyBtn {
+    position: absolute;
+    font-size: 10px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #ceab93;
+    border-radius: 30px;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.catItem .copyBtn:hover {
+    background-color: #ad8b73;
+}
+
+.catItem .copyBtn:active {
+    background-color: #614d3f;
 }

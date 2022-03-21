@@ -56,12 +56,13 @@ const App = () => {
     }
 
     function handleRemoveCat(event) {
-        const removeImageSrc = event.target.previousElementSibling.src;
-        const removeSelectedCat = favorites.filter((favorite) => favorite !== removeImageSrc);
+        const selectedImageSrc = event.target.previousElementSibling.src;
+        const removeSelectedCat = favorites.filter((favorite) => favorite !== selectedImageSrc);
         setFavorites(removeSelectedCat);
         jsonLocalStorage.setItem("favorites", removeSelectedCat);
     }
 
+    const alradyCopy = false;
     const counterTitle = counter === null ? "" : counter + "번째 ";
 
     return (
